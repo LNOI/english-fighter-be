@@ -1,7 +1,8 @@
 from uuid import UUID, uuid4
-from sqlmodel import SQLModel, Field, Relationship
+from sqlmodel import Field, Relationship
 from enum import Enum
 from datetime import datetime
+from src.model.base import BaseModel
 
 
 class ToiecLevel(str, Enum):
@@ -18,19 +19,6 @@ class TypeQuestion(str, Enum):
     TEXT = "TEXT"
 
 
-class ConfigToiec(SQLModel, table=True):
-    id: UUID = Field(default_factory=uuid4, primary_key=True)
-    name: str
-    type: str
-    audio: str | None = None
-    image: str | None = None
-    description: str | None = None
-    updated_at: datetime = Field(default_factory=datetime.now)
-    deleted_at: datetime | None = None
-    default: bool = False
-    extend_config: str | None = None
-
-
 class ToiecType(str, Enum):
     LISTENING = "LISTENING"
     READING = "READING"
@@ -40,52 +28,51 @@ class ToiecType(str, Enum):
     WRITING_SPEAKING = "WRITING_SPEAKING"
 
 
-class QuestionToiec(SQLModel, table=True):
-    id: UUID = Field(default_factory=uuid4, primary_key=True)
+class ConfigToiec(BaseModel, table=True):
+    name: str
+    type: str
+    audio: str | None = None
+    image: str | None = None
+    description: str | None = None
+    default: bool = False
+    extend_config: str | None = None
+
+
+class QuestionToiec(BaseModel, table=True):
     toiec_id: UUID = Field(foreign_key="toiec.id")
     part_id: UUID = Field(foreign_key="parttoiec.id")
     group_id: UUID = Field(foreign_key="groupquestion.id")
-    order: int
-    question: str
+    order: int = Field(min_items=1, max_items=200)
+    question_text: str
+    question_audio: str | None = None
+    answer_choices: str | None = None
+    correct_answer: str | None = None  # A, B, C, D
     type_input: str = TypeQuestion.TEXT
     type_toiec: str
-    direction: str | None = None
-    audio: str | None = None
-    list_answer: str | None = None
     suggest_answer: str | None = None
-    updated_at: datetime = Field(default_factory=datetime.now)
-    deleted_at: datetime | None = None
 
 
-class GroupQuestion(SQLModel, table=True):
-    id: UUID = Field(default_factory=uuid4, primary_key=True)
-    title: str
-    toiec_id: UUID = Field(foreign_key="toiec.id")
-    part_id: UUID = Field(foreign_key="parttoiec.id")
-    question: str | None = None
-    updated_at: datetime = Field(default_factory=datetime.now)
-    deleted_at: datetime | None = None
-
-
-class Toiec(SQLModel, table=True):
-    id: UUID = Field(default_factory=uuid4, primary_key=True)
-    title: str
+class Toiec(BaseModel, table=True):
+    name: str
     description: str | None = None
     level: str
     type_toiec: str
+    total_part: int
+    total_questions: int
+    total_time: int
     author: str | None = None
-    updated_at: datetime = Field(default_factory=datetime.now)
-    deleted_at: datetime | None = None
 
 
-class PartToiec(SQLModel, table=True):
-    id: UUID = Field(default_factory=uuid4, primary_key=True)
+class PartToiec(BaseModel, table=True):
+    name: str
     toiec_id: UUID = Field(foreign_key="toiec.id")
     part: int
     directions: str | None = None
-    updated_at: datetime = Field(default_factory=datetime.now)
-    deleted_at: datetime | None = None
 
 
-# Listening and Reading have 7 parts
-# First call endpoint -> get a toiec test ->
+class GroupQuestion(BaseModel, table=True):
+    name: str
+    toiec_id: UUID = Field(foreign_key="toiec.id")
+    part_id: UUID = Field(foreign_key="parttoiec.id")
+    question_text: str | None = None
+    question_audio: str | None = None

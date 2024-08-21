@@ -4,3 +4,4 @@ __pycache__
 postgres_langchain_data
 .env
 tmp/
+.mount

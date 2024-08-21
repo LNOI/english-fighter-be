@@ -12,7 +12,7 @@ class Config(BaseSettings):
     MINIO_SECURE: bool = False
     MINIO_BUCKET_NAME: str | None = "englishfighter"
     DB_URL: str | None = (
-        "postgresql+psycopg2://langchain:langchain@localhost:5432/langchain"
+        "postgresql+psycopg2://langchain:langchain@localhost:5444/langchain"
     )
 
 

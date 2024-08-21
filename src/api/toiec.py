@@ -19,24 +19,54 @@ class ToiecType(str, Enum):
 
 
 class ToiecInput(BaseModel):
-    title: str
+    name: str
     description: str
     level: str
-    author: str
+    total_part: int
+    total_questions: int
+    total_time: int
     type_toiec: str
+    author: str
+
+
+class PartToiecInput(BaseModel):
+    toiec_id: UUID
+    part: int
+    name: str
+    directions: str
+
+
+class GroupQuestionInput(BaseModel):
+    name: str
+    question_text: str | None = None
+    question_audio: str | None = None
+
+
+class QuestionToiecInput(BaseModel):
+    order: int
+    question_text: str | None = None
+    question_audio: str | None = None
+    answer_choices: str | None = None
+    correct_answer: str | None = None
+    type_input: str = "TEXT"
+    type_toiec: str | None = None
+    suggest_answer: str | None = None
 
 
 @router.post("/")
-async def create_toiec(toiec: ToiecInput, db: Session = Depends(get_session)):
+async def create_toiec(input: ToiecInput, db: Session = Depends(get_session)):
     """
     Create Toiec
     """
     toiec = Toiec(
-        title=toiec.title,
-        description=toiec.description,
-        level=toiec.level,
-        author=toiec.author,
-        type_toiec=toiec.type_toiec,
+        name=input.name,
+        description=input.description,
+        level=input.level,
+        total_part=input.total_part,
+        total_questions=input.total_questions,
+        total_time=input.total_time,
+        author=input.author,
+        type_toiec=input.type_toiec,
     )
     db.add(toiec)
     db.commit()
@@ -89,72 +119,30 @@ async def get_toiec(toiec_id: UUID, db: Session = Depends(get_session)):
     """
     Get Toiec
     """
-    # Get all questions attributes
-    query = (
-        select(Toiec, PartToiec, GroupQuestion, QuestionToiec)
-        .where(
-            Toiec.id == toiec_id,
-            PartToiec.toiec_id == toiec_id,
-            GroupQuestion.toiec_id == toiec_id,
-            QuestionToiec.toiec_id == toiec_id,
-        )
-        .order_by(QuestionToiec.order)
-    )
-    results = db.exec(query)
+    toiec = db.get(Toiec, toiec_id)
+    if toiec is None:
+        raise HTTPException(status_code=404, detail="Toiec not found")
 
-    data = {}
-    for toiec, part, group, question in results:
-        if "id" not in data:
-            data["id"] = toiec.id
-            data["title"] = toiec.title
-            data["description"] = toiec.description
-            data["level"] = toiec.level
-            data["type_toiec"] = toiec.type_toiec
-            data["author"] = toiec.author
-            data["parts"] = []
+    parts = db.scalars(select(PartToiec).where(PartToiec.toiec_id == toiec_id)).all()
+    if not parts:
+        raise HTTPException(status_code=404, detail="Parts not found")
 
-        if len(data["parts"]) < part.part:
-            data["parts"].append(
-                {
-                    "part": part.part,
-                    "title": part.title,
-                    "directions": part.directions,
-                    "groups": [],
-                }
-            )
+    groups = db.scalars(
+        select(GroupQuestion).where(GroupQuestion.toiec_id == toiec_id)
+    ).all()
+    if not groups:
+        raise HTTPException(status_code=404, detail="Groups not found")
 
-        exist_index = -1
-        for g in data["parts"][-1]["groups"]:
-            if g["id"] == group.id:
-                exist_index = data["parts"][-1]["groups"].index(g)
-                break
+    questions = db.scalars(
+        select(QuestionToiec).where(QuestionToiec.toiec_id == toiec_id)
+    ).all()
+    if not questions:
+        raise HTTPException(status_code=404, detail="Questions not found")
 
-        if exist_index == -1:
-            data["parts"][-1]["groups"].append(
-                {
-                    "id": group.id,
-                    "title": group.title,
-                    "question": group.question,
-                    "questions": [],
-                }
-            )
-            exist_index = 0
-
-        data["parts"][-1]["groups"][exist_index]["questions"].append(
-            {
-                "id": question.id,
-                "order": question.order,
-                "question": question.question,
-                "type_input": question.type_input,
-                "type_toiec": question.type_toiec,
-                "direction": question.direction,
-                "audio": question.audio,
-                "list_answer": question.list_answer,
-                "suggest_answer": question.suggest_answer,
-            }
-        )
-        # print(toiec, part, group, question)
-    return data
+    # combine all data
+    data = {
+        "id": toiec.id,
+    }
 
 
 @router.get("/config/{type}/default")
@@ -164,16 +152,6 @@ async def get_default_config_toiec(db: Session = Depends(get_session)):
     """
     query = select(ConfigToiec).where(ConfigToiec.default)
     return db.scalars(query).first()
-
-
-class PartToiecInput(BaseModel):
-    toiec_id: UUID
-    part: int
-    title: str
-    directions: str
-
-
-# Create config toiec
 
 
 @router.post("/{toiec_id}/part")
@@ -186,7 +164,7 @@ async def create_part_toiec(
     part = PartToiec(
         toiec_id=toiec_id,
         part=part.part,
-        title=part.title,
+        name=part.name,
         directions=part.directions,
     )
     db.add(part)
@@ -195,18 +173,11 @@ async def create_part_toiec(
     return part
 
 
-class GroupQuestionInput(BaseModel):
-    toiec_id: UUID
-    part_id: UUID
-    title: str
-    question: str
-
-
 @router.post("/{toiec_id}/part/{part_id}/group")
 async def create_group_question_toiec(
     toiec_id: str,
     part_id: str,
-    group: GroupQuestionInput,
+    input: GroupQuestionInput,
     db: Session = Depends(get_session),
 ):
     """
@@ -215,24 +186,14 @@ async def create_group_question_toiec(
     group = GroupQuestion(
         toiec_id=toiec_id,
         part_id=part_id,
-        title=group.title,
-        question=group.question,
+        name=input.name,
+        question_text=input.question_text,
+        question_audio=input.question_audio,
     )
     db.add(group)
     db.commit()
     db.refresh(group)
     return group
-
-
-class QuestionToiecInput(BaseModel):
-    order: int
-    question: str
-    type_input: str
-    type_toiec: str | None = None
-    direction: str | None = None
-    audio: str | None = None
-    list_answer: str
-    suggest_answer: str
 
 
 @router.post("/{toiec_id}/part/{part_id}/group/{group_id}/question")
@@ -251,12 +212,12 @@ async def create_question_toiec(
         part_id=part_id,
         group_id=group_id,
         order=question.order,
-        question=question.question,
+        question_text=question.question_text,
+        question_audio=question.question_audio,
+        answer_choices=question.answer_choices,
+        correct_answer=question.correct_answer,
         type_input=question.type_input,
         type_toiec=question.type_toiec,
-        direction=question.direction,
-        audio=question.audio,
-        list_answer=question.list_answer,
         suggest_answer=question.suggest_answer,
     )
     db.add(question)
@@ -290,7 +251,6 @@ def convert_data_database_to_json(questions):
         group = filter(lambda x: x["id"] == q[""], converted_data["parts"]["groups"])
 
 
-# Load all Toiec by type and Pagaing
 @router.get("/type/{type_toiec}")
 async def list_toiec_by_type(
     type_toiec: str, page: int = 1, db: Session = Depends(get_session)
