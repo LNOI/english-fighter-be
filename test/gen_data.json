@@ -1,0 +1,777 @@
+[
+    {
+        "name": "Group Question 1",
+        "group_question": "",
+        "number_of_questions": 1,
+        "questions": [
+            {
+                "question": "What time is it?",
+                "order": 7,
+                "audio": "http://localhost:9000/englishfighter/toiec/audio/toiec_lr_part1_1.mp3",
+                "image": "",
+                "type_input": "audio",
+                "type_toiec": "LISTENING",
+                "directions": "",
+                "list_answer": [
+                    {
+                        "answer": "A",
+                        "content": "It's 3:30."
+                    },
+                    {
+                        "answer": "B",
+                        "content": "It's 3:15."
+                    },
+                    {
+                        "answer": "C",
+                        "content": "It's 3:45."
+                    }
+                ],
+                "correct_answer": "A"
+            }
+        ]
+    },
+    {
+        "name": "Group Question 1",
+        "group_question": "",
+        "number_of_questions": 1,
+        "questions": [
+            {
+                "question": "What time is it?",
+                "order": 8,
+                "audio": "http://localhost:9000/englishfighter/toiec/audio/toiec_lr_part1_1.mp3",
+                "image": "",
+                "type_input": "audio",
+                "type_toiec": "LISTENING",
+                "directions": "",
+                "list_answer": [
+                    {
+                        "answer": "A",
+                        "content": "It's 3:30."
+                    },
+                    {
+                        "answer": "B",
+                        "content": "It's 3:15."
+                    },
+                    {
+                        "answer": "C",
+                        "content": "It's 3:45."
+                    }
+                ],
+                "correct_answer": "A"
+            }
+        ]
+    },
+    {
+        "name": "Group Question 1",
+        "group_question": "",
+        "number_of_questions": 1,
+        "questions": [
+            {
+                "question": "What time is it?",
+                "order": 9,
+                "audio": "http://localhost:9000/englishfighter/toiec/audio/toiec_lr_part1_1.mp3",
+                "image": "",
+                "type_input": "audio",
+                "type_toiec": "LISTENING",
+                "directions": "",
+                "list_answer": [
+                    {
+                        "answer": "A",
+                        "content": "It's 3:30."
+                    },
+                    {
+                        "answer": "B",
+                        "content": "It's 3:15."
+                    },
+                    {
+                        "answer": "C",
+                        "content": "It's 3:45."
+                    }
+                ],
+                "correct_answer": "A"
+            }
+        ]
+    },
+    {
+        "name": "Group Question 1",
+        "group_question": "",
+        "number_of_questions": 1,
+        "questions": [
+            {
+                "question": "What time is it?",
+                "order": 10,
+                "audio": "http://localhost:9000/englishfighter/toiec/audio/toiec_lr_part1_1.mp3",
+                "image": "",
+                "type_input": "audio",
+                "type_toiec": "LISTENING",
+                "directions": "",
+                "list_answer": [
+                    {
+                        "answer": "A",
+                        "content": "It's 3:30."
+                    },
+                    {
+                        "answer": "B",
+                        "content": "It's 3:15."
+                    },
+                    {
+                        "answer": "C",
+                        "content": "It's 3:45."
+                    }
+                ],
+                "correct_answer": "A"
+            }
+        ]
+    },
+    {
+        "name": "Group Question 1",
+        "group_question": "",
+        "number_of_questions": 1,
+        "questions": [
+            {
+                "question": "What time is it?",
+                "order": 11,
+                "audio": "http://localhost:9000/englishfighter/toiec/audio/toiec_lr_part1_1.mp3",
+                "image": "",
+                "type_input": "audio",
+                "type_toiec": "LISTENING",
+                "directions": "",
+                "list_answer": [
+                    {
+                        "answer": "A",
+                        "content": "It's 3:30."
+                    },
+                    {
+                        "answer": "B",
+                        "content": "It's 3:15."
+                    },
+                    {
+                        "answer": "C",
+                        "content": "It's 3:45."
+                    }
+                ],
+                "correct_answer": "A"
+            }
+        ]
+    },
+    {
+        "name": "Group Question 1",
+        "group_question": "",
+        "number_of_questions": 1,
+        "questions": [
+            {
+                "question": "What time is it?",
+                "order": 12,
+                "audio": "http://localhost:9000/englishfighter/toiec/audio/toiec_lr_part1_1.mp3",
+                "image": "",
+                "type_input": "audio",
+                "type_toiec": "LISTENING",
+                "directions": "",
+                "list_answer": [
+                    {
+                        "answer": "A",
+                        "content": "It's 3:30."
+                    },
+                    {
+                        "answer": "B",
+                        "content": "It's 3:15."
+                    },
+                    {
+                        "answer": "C",
+                        "content": "It's 3:45."
+                    }
+                ],
+                "correct_answer": "A"
+            }
+        ]
+    },
+    {
+        "name": "Group Question 1",
+        "group_question": "",
+        "number_of_questions": 1,
+        "questions": [
+            {
+                "question": "What time is it?",
+                "order": 13,
+                "audio": "http://localhost:9000/englishfighter/toiec/audio/toiec_lr_part1_1.mp3",
+                "image": "",
+                "type_input": "audio",
+                "type_toiec": "LISTENING",
+                "directions": "",
+                "list_answer": [
+                    {
+                        "answer": "A",
+                        "content": "It's 3:30."
+                    },
+                    {
+                        "answer": "B",
+                        "content": "It's 3:15."
+                    },
+                    {
+                        "answer": "C",
+                        "content": "It's 3:45."
+                    }
+                ],
+                "correct_answer": "A"
+            }
+        ]
+    },
+    {
+        "name": "Group Question 1",
+        "group_question": "",
+        "number_of_questions": 1,
+        "questions": [
+            {
+                "question": "What time is it?",
+                "order": 14,
+                "audio": "http://localhost:9000/englishfighter/toiec/audio/toiec_lr_part1_1.mp3",
+                "image": "",
+                "type_input": "audio",
+                "type_toiec": "LISTENING",
+                "directions": "",
+                "list_answer": [
+                    {
+                        "answer": "A",
+                        "content": "It's 3:30."
+                    },
+                    {
+                        "answer": "B",
+                        "content": "It's 3:15."
+                    },
+                    {
+                        "answer": "C",
+                        "content": "It's 3:45."
+                    }
+                ],
+                "correct_answer": "A"
+            }
+        ]
+    },
+    {
+        "name": "Group Question 1",
+        "group_question": "",
+        "number_of_questions": 1,
+        "questions": [
+            {
+                "question": "What time is it?",
+                "order": 15,
+                "audio": "http://localhost:9000/englishfighter/toiec/audio/toiec_lr_part1_1.mp3",
+                "image": "",
+                "type_input": "audio",
+                "type_toiec": "LISTENING",
+                "directions": "",
+                "list_answer": [
+                    {
+                        "answer": "A",
+                        "content": "It's 3:30."
+                    },
+                    {
+                        "answer": "B",
+                        "content": "It's 3:15."
+                    },
+                    {
+                        "answer": "C",
+                        "content": "It's 3:45."
+                    }
+                ],
+                "correct_answer": "A"
+            }
+        ]
+    },
+    {
+        "name": "Group Question 1",
+        "group_question": "",
+        "number_of_questions": 1,
+        "questions": [
+            {
+                "question": "What time is it?",
+                "order": 16,
+                "audio": "http://localhost:9000/englishfighter/toiec/audio/toiec_lr_part1_1.mp3",
+                "image": "",
+                "type_input": "audio",
+                "type_toiec": "LISTENING",
+                "directions": "",
+                "list_answer": [
+                    {
+                        "answer": "A",
+                        "content": "It's 3:30."
+                    },
+                    {
+                        "answer": "B",
+                        "content": "It's 3:15."
+                    },
+                    {
+                        "answer": "C",
+                        "content": "It's 3:45."
+                    }
+                ],
+                "correct_answer": "A"
+            }
+        ]
+    },
+    {
+        "name": "Group Question 1",
+        "group_question": "",
+        "number_of_questions": 1,
+        "questions": [
+            {
+                "question": "What time is it?",
+                "order": 17,
+                "audio": "http://localhost:9000/englishfighter/toiec/audio/toiec_lr_part1_1.mp3",
+                "image": "",
+                "type_input": "audio",
+                "type_toiec": "LISTENING",
+                "directions": "",
+                "list_answer": [
+                    {
+                        "answer": "A",
+                        "content": "It's 3:30."
+                    },
+                    {
+                        "answer": "B",
+                        "content": "It's 3:15."
+                    },
+                    {
+                        "answer": "C",
+                        "content": "It's 3:45."
+                    }
+                ],
+                "correct_answer": "A"
+            }
+        ]
+    },
+    {
+        "name": "Group Question 1",
+        "group_question": "",
+        "number_of_questions": 1,
+        "questions": [
+            {
+                "question": "What time is it?",
+                "order": 18,
+                "audio": "http://localhost:9000/englishfighter/toiec/audio/toiec_lr_part1_1.mp3",
+                "image": "",
+                "type_input": "audio",
+                "type_toiec": "LISTENING",
+                "directions": "",
+                "list_answer": [
+                    {
+                        "answer": "A",
+                        "content": "It's 3:30."
+                    },
+                    {
+                        "answer": "B",
+                        "content": "It's 3:15."
+                    },
+                    {
+                        "answer": "C",
+                        "content": "It's 3:45."
+                    }
+                ],
+                "correct_answer": "A"
+            }
+        ]
+    },
+    {
+        "name": "Group Question 1",
+        "group_question": "",
+        "number_of_questions": 1,
+        "questions": [
+            {
+                "question": "What time is it?",
+                "order": 19,
+                "audio": "http://localhost:9000/englishfighter/toiec/audio/toiec_lr_part1_1.mp3",
+                "image": "",
+                "type_input": "audio",
+                "type_toiec": "LISTENING",
+                "directions": "",
+                "list_answer": [
+                    {
+                        "answer": "A",
+                        "content": "It's 3:30."
+                    },
+                    {
+                        "answer": "B",
+                        "content": "It's 3:15."
+                    },
+                    {
+                        "answer": "C",
+                        "content": "It's 3:45."
+                    }
+                ],
+                "correct_answer": "A"
+            }
+        ]
+    },
+    {
+        "name": "Group Question 1",
+        "group_question": "",
+        "number_of_questions": 1,
+        "questions": [
+            {
+                "question": "What time is it?",
+                "order": 20,
+                "audio": "http://localhost:9000/englishfighter/toiec/audio/toiec_lr_part1_1.mp3",
+                "image": "",
+                "type_input": "audio",
+                "type_toiec": "LISTENING",
+                "directions": "",
+                "list_answer": [
+                    {
+                        "answer": "A",
+                        "content": "It's 3:30."
+                    },
+                    {
+                        "answer": "B",
+                        "content": "It's 3:15."
+                    },
+                    {
+                        "answer": "C",
+                        "content": "It's 3:45."
+                    }
+                ],
+                "correct_answer": "A"
+            }
+        ]
+    },
+    {
+        "name": "Group Question 1",
+        "group_question": "",
+        "number_of_questions": 1,
+        "questions": [
+            {
+                "question": "What time is it?",
+                "order": 21,
+                "audio": "http://localhost:9000/englishfighter/toiec/audio/toiec_lr_part1_1.mp3",
+                "image": "",
+                "type_input": "audio",
+                "type_toiec": "LISTENING",
+                "directions": "",
+                "list_answer": [
+                    {
+                        "answer": "A",
+                        "content": "It's 3:30."
+                    },
+                    {
+                        "answer": "B",
+                        "content": "It's 3:15."
+                    },
+                    {
+                        "answer": "C",
+                        "content": "It's 3:45."
+                    }
+                ],
+                "correct_answer": "A"
+            }
+        ]
+    },
+    {
+        "name": "Group Question 1",
+        "group_question": "",
+        "number_of_questions": 1,
+        "questions": [
+            {
+                "question": "What time is it?",
+                "order": 22,
+                "audio": "http://localhost:9000/englishfighter/toiec/audio/toiec_lr_part1_1.mp3",
+                "image": "",
+                "type_input": "audio",
+                "type_toiec": "LISTENING",
+                "directions": "",
+                "list_answer": [
+                    {
+                        "answer": "A",
+                        "content": "It's 3:30."
+                    },
+                    {
+                        "answer": "B",
+                        "content": "It's 3:15."
+                    },
+                    {
+                        "answer": "C",
+                        "content": "It's 3:45."
+                    }
+                ],
+                "correct_answer": "A"
+            }
+        ]
+    },
+    {
+        "name": "Group Question 1",
+        "group_question": "",
+        "number_of_questions": 1,
+        "questions": [
+            {
+                "question": "What time is it?",
+                "order": 23,
+                "audio": "http://localhost:9000/englishfighter/toiec/audio/toiec_lr_part1_1.mp3",
+                "image": "",
+                "type_input": "audio",
+                "type_toiec": "LISTENING",
+                "directions": "",
+                "list_answer": [
+                    {
+                        "answer": "A",
+                        "content": "It's 3:30."
+                    },
+                    {
+                        "answer": "B",
+                        "content": "It's 3:15."
+                    },
+                    {
+                        "answer": "C",
+                        "content": "It's 3:45."
+                    }
+                ],
+                "correct_answer": "A"
+            }
+        ]
+    },
+    {
+        "name": "Group Question 1",
+        "group_question": "",
+        "number_of_questions": 1,
+        "questions": [
+            {
+                "question": "What time is it?",
+                "order": 24,
+                "audio": "http://localhost:9000/englishfighter/toiec/audio/toiec_lr_part1_1.mp3",
+                "image": "",
+                "type_input": "audio",
+                "type_toiec": "LISTENING",
+                "directions": "",
+                "list_answer": [
+                    {
+                        "answer": "A",
+                        "content": "It's 3:30."
+                    },
+                    {
+                        "answer": "B",
+                        "content": "It's 3:15."
+                    },
+                    {
+                        "answer": "C",
+                        "content": "It's 3:45."
+                    }
+                ],
+                "correct_answer": "A"
+            }
+        ]
+    },
+    {
+        "name": "Group Question 1",
+        "group_question": "",
+        "number_of_questions": 1,
+        "questions": [
+            {
+                "question": "What time is it?",
+                "order": 25,
+                "audio": "http://localhost:9000/englishfighter/toiec/audio/toiec_lr_part1_1.mp3",
+                "image": "",
+                "type_input": "audio",
+                "type_toiec": "LISTENING",
+                "directions": "",
+                "list_answer": [
+                    {
+                        "answer": "A",
+                        "content": "It's 3:30."
+                    },
+                    {
+                        "answer": "B",
+                        "content": "It's 3:15."
+                    },
+                    {
+                        "answer": "C",
+                        "content": "It's 3:45."
+                    }
+                ],
+                "correct_answer": "A"
+            }
+        ]
+    },
+    {
+        "name": "Group Question 1",
+        "group_question": "",
+        "number_of_questions": 1,
+        "questions": [
+            {
+                "question": "What time is it?",
+                "order": 26,
+                "audio": "http://localhost:9000/englishfighter/toiec/audio/toiec_lr_part1_1.mp3",
+                "image": "",
+                "type_input": "audio",
+                "type_toiec": "LISTENING",
+                "directions": "",
+                "list_answer": [
+                    {
+                        "answer": "A",
+                        "content": "It's 3:30."
+                    },
+                    {
+                        "answer": "B",
+                        "content": "It's 3:15."
+                    },
+                    {
+                        "answer": "C",
+                        "content": "It's 3:45."
+                    }
+                ],
+                "correct_answer": "A"
+            }
+        ]
+    },
+    {
+        "name": "Group Question 1",
+        "group_question": "",
+        "number_of_questions": 1,
+        "questions": [
+            {
+                "question": "What time is it?",
+                "order": 27,
+                "audio": "http://localhost:9000/englishfighter/toiec/audio/toiec_lr_part1_1.mp3",
+                "image": "",
+                "type_input": "audio",
+                "type_toiec": "LISTENING",
+                "directions": "",
+                "list_answer": [
+                    {
+                        "answer": "A",
+                        "content": "It's 3:30."
+                    },
+                    {
+                        "answer": "B",
+                        "content": "It's 3:15."
+                    },
+                    {
+                        "answer": "C",
+                        "content": "It's 3:45."
+                    }
+                ],
+                "correct_answer": "A"
+            }
+        ]
+    },
+    {
+        "name": "Group Question 1",
+        "group_question": "",
+        "number_of_questions": 1,
+        "questions": [
+            {
+                "question": "What time is it?",
+                "order": 28,
+                "audio": "http://localhost:9000/englishfighter/toiec/audio/toiec_lr_part1_1.mp3",
+                "image": "",
+                "type_input": "audio",
+                "type_toiec": "LISTENING",
+                "directions": "",
+                "list_answer": [
+                    {
+                        "answer": "A",
+                        "content": "It's 3:30."
+                    },
+                    {
+                        "answer": "B",
+                        "content": "It's 3:15."
+                    },
+                    {
+                        "answer": "C",
+                        "content": "It's 3:45."
+                    }
+                ],
+                "correct_answer": "A"
+            }
+        ]
+    },
+    {
+        "name": "Group Question 1",
+        "group_question": "",
+        "number_of_questions": 1,
+        "questions": [
+            {
+                "question": "What time is it?",
+                "order": 29,
+                "audio": "http://localhost:9000/englishfighter/toiec/audio/toiec_lr_part1_1.mp3",
+                "image": "",
+                "type_input": "audio",
+                "type_toiec": "LISTENING",
+                "directions": "",
+                "list_answer": [
+                    {
+                        "answer": "A",
+                        "content": "It's 3:30."
+                    },
+                    {
+                        "answer": "B",
+                        "content": "It's 3:15."
+                    },
+                    {
+                        "answer": "C",
+                        "content": "It's 3:45."
+                    }
+                ],
+                "correct_answer": "A"
+            }
+        ]
+    },
+    {
+        "name": "Group Question 1",
+        "group_question": "",
+        "number_of_questions": 1,
+        "questions": [
+            {
+                "question": "What time is it?",
+                "order": 30,
+                "audio": "http://localhost:9000/englishfighter/toiec/audio/toiec_lr_part1_1.mp3",
+                "image": "",
+                "type_input": "audio",
+                "type_toiec": "LISTENING",
+                "directions": "",
+                "list_answer": [
+                    {
+                        "answer": "A",
+                        "content": "It's 3:30."
+                    },
+                    {
+                        "answer": "B",
+                        "content": "It's 3:15."
+                    },
+                    {
+                        "answer": "C",
+                        "content": "It's 3:45."
+                    }
+                ],
+                "correct_answer": "A"
+            }
+        ]
+    },
+    {
+        "name": "Group Question 1",
+        "group_question": "",
+        "number_of_questions": 1,
+        "questions": [
+            {
+                "question": "What time is it?",
+                "order": 31,
+                "audio": "http://localhost:9000/englishfighter/toiec/audio/toiec_lr_part1_1.mp3",
+                "image": "",
+                "type_input": "audio",
+                "type_toiec": "LISTENING",
+                "directions": "",
+                "list_answer": [
+                    {
+                        "answer": "A",
+                        "content": "It's 3:30."
+                    },
+                    {
+                        "answer": "B",
+                        "content": "It's 3:15."
+                    },
+                    {
+                        "answer": "C",
+                        "content": "It's 3:45."
+                    }
+                ],
+                "correct_answer": "A"
+            }
+        ]
+    }
+]

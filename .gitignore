@@ -1,0 +1,6 @@
+.venv
+.vscode
+__pycache__
+postgres_langchain_data
+.env
+tmp/

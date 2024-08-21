@@ -1,0 +1,46 @@
+services:
+  # app-langchain:
+  #   build: .
+  #   restart: on-failure
+  #   ports:
+  #     - "8000:8000"
+  #   environment:
+  #     - OPENAI_API_KEY=
+  #   volumes:
+  #     - ./src:/project/src
+  #   depends_on:
+  #     - langchain-database
+  #   networks:
+  #     - nw_langchain  
+  langchain-database:
+    image: postgres:14
+    container_name: langchain-db
+    volumes:
+      - ./postgres_langchain_data:/var/lib/postgresql/data
+    ports:
+      - 5432:5432
+    environment:
+      POSTGRES_DB: langchain
+      POSTGRES_USER: langchain
+      POSTGRES_PASSWORD: langchain
+    networks:
+      - nw_langchain
+
+  minio:
+    image: quay.io/minio/minio
+    container_name: minio
+    ports:
+      - "9000:9000"
+      - "9001:9001"
+    environment:
+      MINIO_ROOT_USER: admin123
+      MINIO_ROOT_PASSWORD: admin123
+    volumes:
+      - ~/minio/data:/data
+    command: server /data --console-address ":9001"
+    networks:
+      - nw_langchain
+
+networks:
+  nw_langchain:
+    external: true

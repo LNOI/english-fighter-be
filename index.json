@@ -1,0 +1,33 @@
+{
+    "id": "8453abc9-e092-4dfe-9fb5-611a41ad7220",
+    "title": "TOEIC Listening and Reading Test 2",
+    "description": "The TOEIC Listening and Reading test is a valid assessment of English-language reading and listening skills for the workplace. Employers worldwide use the TOEIC test to determine who can communicate effectively in English across borders and cultures with coworkers and clients.",
+    "level": "A1",
+    "type_toiec": "LISTENING_READING",
+    "author": "ETS TOEIC",
+    "parts": {
+        "070d2b09-e8e7-467d-a340-add00435fad9": {
+            "part": 1,
+            "title": "Part 1: Photographs",
+            "directions": "You will see a photograph in your test book and you will hear four statements. You will have to choose the statement that best describes the photograph. There are 6 photographs and 6 statements in this part.",
+            "groups": {
+                "e4dc4dfe-a4c4-4998-a091-3b7ea41386df": {
+                    "title": "Group Question 1",
+                    "question": "This is group question 1",
+                    "questions": {
+                        "b85d83d7-4a73-4f8e-978d-728ed09f0be3": {
+                            "order": 2,
+                            "question": "This is question 2",
+                            "type_input": "audio",
+                            "type_toiec": "LISTENING",
+                            "direction": "Choose the best description of the photograph.",
+                            "audio": "https://www.soundhelix.com/examples/mp3/SoundHelix-Song-2.mp3",
+                            // "list_answer": "[{"answer": "A", "content": "Answer A"}, {"answer": "B", "content": "Answer B"}, {"answer": "C", "content": "Answer C"}, {"answer": "D", "content": "Answer D"}]",
+                            "suggest_answer": "B"
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

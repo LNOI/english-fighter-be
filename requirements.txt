@@ -1,0 +1,16 @@
+fastapi[standard]
+pydantic
+langchain-openai
+langserve[all]
+langchain-cli
+python-dotenv
+uvicorn
+
+pydantic_settings
+certifi
+sqlmodel
+psycopg2-binary
+alembic
+httpx
+minio
+python-multipart
